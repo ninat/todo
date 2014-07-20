@@ -1,0 +1,18 @@
+<h3>Task Form</h3>
+<form action="post">
+	<div>
+		<label for="name">Todo:</label>
+		<input type="text" id="name" value="<%= name %>" required />
+		<span></span>
+	</div>
+	<div>
+		<label for="deadLine">Up to:</label>
+		<input type="date" id="deadLine" value="<%= deadLine %>" required />
+	</div>
+	<div>
+		<label for="description">Description:</label>
+		<textarea id="description" cols="30" rows="10"><%= description %></textarea>
+	</div>
+</form>
+<button id="btnSave" class="btn btn-success">Save</button>
+<a href="#" class="btn btn-primary">Back</a>

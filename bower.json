@@ -1,0 +1,15 @@
+{
+	"name": "Todo List",
+	"version":"1.0",
+	"dependencies": {
+		"jquery": null,
+	    "backbone-amd": null,
+	    "underscore-amd": null,
+	    "requirejs": null ,
+	    "text": null,
+	    "less": null,
+	    "bootstrap": null,
+	    "backbone-validation": null,
+	    "Backbone.localStorage": null
+	}
+}

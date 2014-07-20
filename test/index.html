@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf8'>
+  <title>Backbone Test Suite</title>
+  <link rel="stylesheet" href="libs/qunit.css" type="text/css" media="screen">
+  <script src="../src/app/libs/requirejs/require.js"></script>
+  <script src="libs/qunit.js"></script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script>
+
+require.config({
+    baseUrl: "../src/app/",
+    paths: {
+        text : 'libs/text/text',
+        underscore : 'libs/underscore-amd/underscore',
+        backbone : 'libs/backbone-amd/backbone',
+        jquery : 'libs/jquery/dist/jquery',
+        localstorage : 'libs/Backbone.localStorage/backbone.localStorage',
+        validation : 'libs/backbone-validation/src/backbone-validation',
+        bootstrap : 'libs/bootstrap/js/modal',
+    },
+    shim: {
+        underscore: {
+            exports: '_'
+        },
+        backbone: {
+            exports: 'Backbone'
+        },
+        localStorage: {
+            deps: ['backbone']
+        },
+        validation: {
+            deps: ['backbone']
+        },
+        bootstrap: {
+            deps: ['jquery']
+        }
+    }
+  });
+
+  QUnit.config.autostart = false;
+  require(
+            [
+              "../../test/collections/TodoListTests",
+              "../../test/models/TodoListTests",
+              "../../test/views/AddTaskTests",
+              "../../test/views/TaskListingTests",
+              "../../test/views/IndexTests",
+              "../../test/routerTests"
+            ],
+            function () {
+              QUnit.start();
+            }
+  );
+  </script>
+</body>
+</html>

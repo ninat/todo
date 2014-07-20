@@ -1,0 +1,18 @@
+<li class="task" draggable="true" data-id="<%= id %>">
+    <a href="#" class="showMoreBtn">Details</a>
+    <label>
+        <input type="checkbox" <%= state=='done' ? 'checked' : '' %> class="toggleCheckbox" />
+        <%= name %>
+		<% if(deadLine != '') { %>
+        upto (<%= deadLine %>)
+		<% } %>
+    </label>
+    <p class="description">
+        <%= description %>
+    </p>
+    <p>
+        <a href="#edit/<%= id %>" class="control btnEdit" title="Edit the task"></a>
+        <a data-toggle="modal" href="#deleting" data-id="<%= id %>" class="control btnDelete confirm-delete" title="Delete the task"></a>
+        <a href="#" class="moveToStartTask control control-start" title="Start the task"></a>
+    </p>
+</li>

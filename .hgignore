@@ -1,0 +1,9 @@
+syntax: glob
+node_modules/*
+src/app/libs/*
+src/index2.html
+src/css/main.min.css
+src/css/main.css
+src/app/main-opt.js
+npm-debug.log
+dist/*
